@@ -1,0 +1,4 @@
+roda na maioria localmente, praticamente instantâneo por causa disso.
+salva o caminho e a referencia para aquele momento do código
+snapshot, foto de como estava
+
