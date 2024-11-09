@@ -2,3 +2,72 @@ roda na maioria localmente, praticamente instantâneo por causa disso.
 salva o caminho e a referencia para aquele momento do código
 snapshot, foto de como estava
 
+Sempre que iniciamos um projeto com git, há uma pasta oculta chamada .git
+utiliza para acessar versões antigas e salvar outras opções ao longo do versionamento.
+
+git init inicializa o git no projeto e cria essa pasta .git que fará o controle de versionamento
+
+Estados do git
+untracked - não monitorado
+unmodified - não modificado
+modified - modificado
+staged - preparado para o commit
+
+Exemplos de estados
+Untracked (Não Monitorado)
+São arquivos novos que o Git ainda não conhece
+Exemplo: Quando você cria um novo arquivo
+
+Unmodified (Não Modificado)
+Arquivos que já estão no controle do Git e não sofreram alterações desde o último commit, 
+Logo após fazer um commit, todos os arquivos ficam neste estado
+
+Modified (Modificado)
+Arquivos que já estão no controle do Git e sofreram alterações,
+Quando você edita um arquivo que já estava commitado.
+
+Staged (Preparado)
+Arquivos que estão prontos para serem commitados
+É uma área temporária onde você prepara o que vai entrar no próximo commit
+
+Fluxo
+A[Untracked] -->|git add| D[Staged]
+    B[Modified] -->|git add| D
+    D -->|git commit| C[Unmodified]
+    C -->|editar arquivo| B
+    C -->|git rm| A
+    D -->|git reset HEAD| B
+
+Resumindo
+Untracked = novos arquivos
+Modified = arquivos que sofreram alterações
+Staged = arquivos prontos para o commit / usando git add
+Unmodified = arquivos que já foram commitados e não sofreram alterações desde o último commit.
+
+O estado Staged é exclusivamente alcançado através do comando git add.
+É como um processo de duas etapas:
+Primeiro: git add → coloca na área Staged
+Depois: git commit → salva definitivamente
+    A[Arquivo] -->|git add| B[Staged] -->|git commit| C[Commit/Unmodified]
+
+se usar git add, o arquivo passa para o estado staged
+se usar git commit, o arquivo passa para o estado unmodified
+se usar git checkout -- arquivo, o arquivo passa para o estado unmodified
+se usar git reset HEAD arquivo, o arquivo passa para o estado modified
+se usar git rm arquivo, o arquivo passa para o estado untracked
+
+
+
+git add adiciona o arquivo para o staging area
+
+git add . adiciona todos os arquivos para o staging area
+
+git commit -m "mensagem" cria um commit com a mensagem
+
+git status mostra o que foi modificado
+
+git log mostra o histórico de commits
+
+git checkout -- arquivo desfaz o que foi modificado no arquivo
+
+
