@@ -85,3 +85,9 @@ para criar um novo commit com a mesma mensagem anterior, mas com alterações no
 git commit -C HEAD
 -C significa "reutilizar mensagem de commit"
 HEAD é uma referência para o último commit
+
+-C HEAD copia:
+A mensagem do commit
+A data/hora do commit original
+Mas mantém um hash único para cada commit
+
