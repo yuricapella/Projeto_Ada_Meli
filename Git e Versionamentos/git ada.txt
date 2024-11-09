@@ -57,6 +57,8 @@ se usar git reset HEAD arquivo, o arquivo passa para o estado modified
 se usar git rm arquivo, o arquivo passa para o estado untracked
 
 
+git diff mostra as diferenças entre o modified e o unmodified(arquivos que já foram commitados)
+git diff --staged mostra as diferenças entre o staged (arquivos que estão prontos para o commit com git add) e o unmodified.
 
 git add adiciona o arquivo para o staging area
 
