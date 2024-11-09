@@ -60,6 +60,8 @@ se usar git rm arquivo, o arquivo passa para o estado untracked
 git diff mostra as diferenças entre o modified e o unmodified(arquivos que já foram commitados)
 git diff --staged mostra as diferenças entre o staged (arquivos que estão prontos para o commit com git add) e o unmodified.
 
+
+
 git add adiciona o arquivo para o staging area
 
 git add . adiciona todos os arquivos para o staging area
@@ -72,4 +74,14 @@ git log mostra o histórico de commits
 
 git checkout -- arquivo desfaz o que foi modificado no arquivo
 
+Quero fazer um segundo commit com a mesma descrição, pois estou alterando um arquivo de texto
+git commit --amend --no-edit
+--amend modifica o último commit
+--no-edit não altera a mensagem do commit
+esse comando faz o commit com a mesma mensagem do commit anterior caso ainda não tenha enviado para o repositório remoto.
 
+para criar um novo commit com a mesma mensagem anterior, mas com alterações no arquivo
+
+git commit -C HEAD
+-C significa "reutilizar mensagem de commit"
+HEAD é uma referência para o último commit
