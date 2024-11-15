@@ -1,3 +1,9 @@
+#DICAS
+Ao usar git log, aperta Q para sair
+
+
+-------------
+
 roda na maioria localmente, praticamente instantâneo por causa disso.
 salva o caminho e a referencia para aquele momento do código
 snapshot, foto de como estava
@@ -93,4 +99,63 @@ Mas mantém um hash único para cada commit
 
 
 git restore arquivo desfaz as alterações no arquivo
-Ou seja, se eu escrever algo no código e salvar mas sem dar commit, posso usar o git restore para desfazer as alterações.
+Ou seja, se eu escrever algo no código e salvar mas sem dar git add, posso usar o git restore para desfazer as alterações.
+
+git restore --staged arquivo desfaz o git add, porém as alterações ainda permanecem no arquivo.
+
+cria arquivo> git add> git commit> git push
+
+git remote mostra a branch do repositório remoto (origin)
+git branch mostra a branch local (main)
+
+git push remote local
+git push origin main
+
+Neste projeto em si eu posso simplesmente usar git push porém em um projeto real, o ideal é usar git push branch-remota branch-local para evitar erros.
+
+git pull origin main
+Para atualizar a branch local caso a branch remota tenha sido atualizada e eu não ter essa versão ainda.
+
+git fetch origin main
+Para trazer a informação da branch remota porém ainda não foi mesclada com a branch local.
+Pode-se usar git diff branch-remota/branch-local para ver as diferenças.
+
+git merge origin/main
+Aplica as mudanças da branch remota para a branch local.
+
+Então entende-se que git pull = git fetch + git merge
+--------------
+Branches
+
+main é a branch principal
+main>commit1>commit2>commit3
+
+git branch
+mostra as Branches
+
+git branch nome-branch
+cria uma nova branch
+
+git checkout nome-branch
+muda para a branch nome-branch
+
+git checkout -b nome-branch
+cria e muda para a branch nome-branch
+
+git log --oneline --decorate --graph --all
+Aparece o histórico de commits com o nome das branches e onde o HEAD está apontando, que seria a branch atual e também o ultimo commit.
+
+HEAD -> test, origin/main, origin/HEAD, main) Update README.md
+6e915fe Update README.md
+a694c21 Atualiza informacoes das anotacoes
+
+Se eu fizer um commit nessa nova branch e quiser retornar para a outra branch, a outra branch não terá esse novo commit.
+
+
+main>commit1>commit2
+test>commit1>commit2>commit3
+para mesclar as duas branches, posso usar git merge test main
+main>commit1>commit2>commit4
+test>commit1>commit2>commit3
+
+
