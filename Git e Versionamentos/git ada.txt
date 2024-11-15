@@ -203,4 +203,23 @@ dc22dca Atualizando informacoes das anotações e do readme após ter testado gi
 Não foram feitos novos commits em si (como pode ver pelos códigos de commit), apenas uma atualização das informações das branches.
 
 
-nova informação do test sem dar merge com main
+nova informação do test sem dar merge com main (informação da branch test)
+
+
+
+novo commit main e seu log
+e2ab889 (HEAD -> main, origin/main, origin/HEAD) Realizado testes de merges e trocas de branchs e atualizado informacoes das anotacoes
+9baf2ff (origin/test, test) Atualizando
+
+novo commit test e seu log
+02d59e5 (HEAD -> test) teste de merge com branchs em commits diferentes
+9baf2ff (origin/test) Atualizando
+
+entrei na branch main e fiz git merge com test, me obrigou a fazer um commit e deu o seguinte log:
+
+79cef90 (HEAD -> main) Fazendo merge com branch test, estando na main com commits diferentes
+02d59e5 (test) teste de merge com branchs em commits diferentes
+e2ab889 (origin/main, origin/HEAD) Realizado testes de merges e trocas de branchs e atualizado informacoes das anotacoes
+9baf2ff (origin/test) Atualizando
+
+mesclou os commits e as informações e criou novo commit
