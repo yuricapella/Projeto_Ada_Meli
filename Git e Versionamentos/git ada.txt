@@ -158,8 +158,10 @@ Se eu fizer um commit nessa nova branch e quiser retornar para a outra branch, a
 
 main>commit1>commit2
 test>commit1>commit2>commit3
-para mesclar as duas branches, posso usar git merge test main
+para mesclar as duas branches, se eu estiver na branch main, posso usar git merge test, para trazer as alterações da branch test para a branch main.
 main>commit1>commit2>commit4
 test>commit1>commit2>commit3
+
+utilizando git merge branch ele já faz um commit com as alterações das duas branches.
 
 
