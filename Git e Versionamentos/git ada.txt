@@ -1,6 +1,10 @@
 #DICAS
 Ao usar git log, aperta Q para sair
 
+Ao usar git merge branch, o git cria um novo commit com as alterações das duas branches.
+É necessário escrever uma mensagem ou apenas apertar :wq para sair.
+:wq significa write and quit
+
 
 -------------
 
