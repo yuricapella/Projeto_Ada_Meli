@@ -146,8 +146,9 @@ muda para a branch nome-branch
 git checkout -b nome-branch
 cria e muda para a branch nome-branch
 
-git log --oneline --decorate --graph --all
+git log --oneline --decorate
 Aparece o histórico de commits com o nome das branches e onde o HEAD está apontando, que seria a branch atual e também o ultimo commit.
+é um jeito melhor de visualizar o histórico de commits e saber onde o head e cada branch está apontando.
 
 HEAD -> test, origin/main, origin/HEAD, main) Update README.md
 6e915fe Update README.md
@@ -164,4 +165,20 @@ test>commit1>commit2>commit3
 
 utilizando git merge branch ele já faz um commit com as alterações das duas branches.
 
+
+após fazer o merge com a branch test, adicionar novas informações e dar commit na branch main.
+
+main>commit1>commit2>commit4>commit5
+test>commit1>commit2>commit3
+
+exemplo de log utilizando git log --oneline --decorate:
+dc22dca (HEAD -> main, origin/main, origin/HEAD) Atualizando informacoes das anotações e do readme após ter testado git merge com outra branch
+1d4a855 (test) Atualizando anotacoes e readme
+fe2c364 Merge branch 'main' into test
+f4fc513 Atualizando anotacoes e readme
+
+basicamente mostra que main (branch local) e origin/main (branch remota) estão apontando para o mesmo commit, o ultimo.
+Enquanto test está apontando para o penultimo commit, está um commit atras.
+
+usando git checkout test, posso mudar para a branch test.
 
