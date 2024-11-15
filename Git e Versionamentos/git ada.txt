@@ -182,3 +182,4 @@ Enquanto test está apontando para o penultimo commit, está um commit atras.
 
 usando git checkout test, posso mudar para a branch test.
 
+nova informação do test sem dar merge com main
