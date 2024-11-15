@@ -1,0 +1,74 @@
+Resumo:
+Definição de Lógica: Lógica é a ciência do raciocínio, originada na Grécia Antiga, focada em estruturar e testar a validade das proposições.
+
+Tipos de Lógica: Existem diferentes tipos de lógica, como a predicativa e a proposicional, sendo a lógica formal a mais usada na programação.
+
+Lógica e Programação: A lógica é fundamental na programação para criar algoritmos que seguem passos sequenciais, como uma receita, permitindo que o raciocínio se aproxime do pensamento do computador.
+
+Raciocínio Sequencial no Dia a Dia: Exemplo de lógica aplicada: sequência de passos para trocar uma lâmpada (desligar, pegar escada, etc.), mostrando como o pensamento lógico é prático.
+
+Pseudocódigo: Ferramenta para representar algoritmos de forma simplificada, ajudando na transição para a programação.
+
+Exemplos de Desenvolvimento de Lógica: Jogos como Sudoku, quebra-cabeças e xadrez são mencionados como formas divertidas de desenvolver raciocínio lógico.
+
+Importância da Lógica para Aprender Programação: A lógica é uma base que facilita o entendimento de conceitos mais avançados na programação, como linguagens e paradigmas.
+
+
+
+Lógica é o estudo de como pensar de forma estruturada e sequencial. 
+
+O termo foi originado na Grécia, aproximadamente V a.C
+
+
+pode ser interpretado como a ciência do raciocínio
+
+Originalmente aplicada à linguagem verbal
+
+a lógica define estruturas e regras. 
+
+Uma afirmação é considerada uma proposição, e um conjunto de regras podem ser aplicadas a uma série de proposições que testam sua validez.
+
+Tipos de lógica:
+predicativa e a proposicional
+Mas existem outras também
+
+Na programação, normalmente, é usada a lógica formal, possui conceitos da computação
+
+
+Para criarmos algoritmos, é essencial saber especificar passos sequenciais e lógicos, e como eles se comportam em conjunto.
+
+A lógica nos permite especificar esses passos e sequências, que nos levam a obter o resultado desejado — assim como uma receita culinária, com ingredientes e passos a serem seguidos.
+
+permite pensar de maneira mais estruturada
+
+similar a de como um computador atua
+
+quem quer aprender a programar, o raciocínio lógico torna a prática mais fluida e natural
+
+Assim como na vida real, organizamos uma sequência de passos lógicos para realizar tarefas diárias.
+
+Um exemplo, é quando vamos trocar uma lâmpada: o passo a passo que seguimos é, basicamente: 
+
+1 - Desligar a lâmpada
+2 - Pegar a lâmpada nova
+3 - Pegar a escada
+4 - Subir na escada
+5 - Remover a lâmpada antiga
+6 - Colocar a lâmpada nova
+7- Testar se deu certo
+
+ mais próximo ao pensamento de um computador. Para isso, vamos usar um pseudocódigo, que nada mais é do que especificar um algoritmo, mas sem os detalhes de uma linguagem de programação.
+
+Imagine uma calculadora que faça uma divisão:
+
+ LEIA DIVIDENDO
+
+ LEIA DIVISOR
+
+ RESULTADO <- DIVIDENDO/DIVISOR
+
+ IMPRIMA RESULTADO
+
+FIM
+
+Com os passos lógicos especificados como pseudocódigo, chegamos muito próximos da implementação em uma linguagem de programação.

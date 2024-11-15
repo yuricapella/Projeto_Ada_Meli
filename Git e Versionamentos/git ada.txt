@@ -91,3 +91,6 @@ A mensagem do commit
 A data/hora do commit original
 Mas mantém um hash único para cada commit
 
+
+git restore arquivo desfaz as alterações no arquivo
+Ou seja, se eu escrever algo no código e salvar mas sem dar commit, posso usar o git restore para desfazer as alterações.
