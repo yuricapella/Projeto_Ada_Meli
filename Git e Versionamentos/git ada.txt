@@ -222,4 +222,11 @@ entrei na branch main e fiz git merge com test, me obrigou a fazer um commit e d
 e2ab889 (origin/main, origin/HEAD) Realizado testes de merges e trocas de branchs e atualizado informacoes das anotacoes
 9baf2ff (origin/test) Atualizando
 
-mesclou os commits e as informações e criou novo commit
+mesclou os commits e as informações e criou novo commit (informação da branch main)
+Então conforme mais informações que coloquei la em cima mas relembrando:
+fiz git checkout test, git merge main git push origin test e git push origin main
+
+e ficou tudo atualizado:
+66cbb60 (HEAD -> test, origin/test, origin/main, origin/HEAD, main) Atualizado fluxo de merge em branchs nas anotacoes
+79cef90 Fazendo merge com branch test, estando na main com commits diferentes
+02d59e5 teste de merge com branchs em commits diferentes
