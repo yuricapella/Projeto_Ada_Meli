@@ -180,5 +180,26 @@ f4fc513 Atualizando anotacoes e readme
 basicamente mostra que main (branch local) e origin/main (branch remota) estão apontando para o mesmo commit, o ultimo.
 Enquanto test está apontando para o penultimo commit, está um commit atras.
 
+se eu der um commit mas não der o git push, o commit ainda não estará na branch remota.
+
+9baf2ff (HEAD -> main) Atualizando
+dc22dca (origin/main, origin/HEAD) Atualizando informacoes das anotações e do readme após ter testado git merge com outra branch
+1d4a855 (test) Atualizando anotacoes e readme
+
 usando git checkout test, posso mudar para a branch test.
+usando git merge main, eu atualizo a branch test com as alterações da branch main.
+
+9baf2ff (HEAD -> test, main) Atualizando
+dc22dca (origin/main, origin/HEAD) Atualizando informacoes das anotações e do readme após ter testado git merge com outra branch
+1d4a855 Atualizando anotacoes e readme
+
+se eu usar git push origin test, envio as alterações da branch test para a branch remota origin/test.
+para atualizar a origin/main, é necessário usar git push origin main também.
+
+9baf2ff (HEAD -> test, origin/test, origin/main, origin/HEAD, main) Atualizando
+dc22dca Atualizando informacoes das anotações e do readme após ter testado git merge com outra branch
+1d4a855 Atualizando anotacoes e readme
+
+Não foram feitos novos commits em si (como pode ver pelos códigos de commit), apenas uma atualização das informações das branches.
+
 
