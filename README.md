@@ -2,3 +2,5 @@
  
 * Comando git pull
 * Comando git fetch
+
+- [ ] Comando git merge
