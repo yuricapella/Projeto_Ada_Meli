@@ -1,0 +1,180 @@
+aplicações via terminal, arquivos, backup
+desenvolvimento embarcado, software de cameras, smartchwatchs e eletrodomésticos, torradeiras que se comunicam com internet.
+
+desenvolvimento de aplicações cientificas, analise de imagens
+
+
+versão lts é mais seguro para empresas (log-term support)
+
+operações matematicas com numeros inteiros somente vão resultar em numeros inteiros em java mesmo se a variavel que irá armazenar o resultado for float ou double.
+
+int a = 3;
+int b = 2;
+float divisao =  a / b;
+Irá resultar em 1.0, para retornar em 1.5:
+float divisao =  (float) a / b;
+
+O que acontece aqui:
+Java primeiro faz a divisão a / b
+Como a e b são int, Java faz uma divisão de inteiros (3 ÷ 2 = 1)
+Só depois converte o resultado (1) para float (1.0)
+Para corrigir, usamos (float) para converter antes da divisão
+
+tipos de dados primitivos:
+byte, short, int, long, float, double, char, boolean
+
+tipos de dados não primitivos:
+String, Arrays
+
+tipos de dados compostos:
+classes, interfaces, arrays
+
+tipos de dados abstratos:
+interfaces, classes abstratas
+
+tipos de dados especiais:
+null, this, super
+
+tipos de dados literais:
+1, 2, 3, 4, 5, 6, 7, 8, 9, 0, true, false, "string"
+
+tipos de dados de referência:
+objetos, arrays, interfaces, classes
+
+tipos de dados de referência são armazenados em heap e tipos de dados de valor são armazenados em stack.
+
+tipos de dados de valor:
+tipos primitivos, tipos de dados literais
+
+
+heap é a memoria alocada para os objetos e stack é a memoria alocada para os tipos de dados de valor.
+
+stack são valores simples e diretos com tamanho fixo. int idade = 10;
+
+heap são valores mais complexos e podem ter tamanhos variados. String nome = "João";
+
+enquanto int segue um determinado padrão de bits, String não segue um padrão de bits, por isso é mais complexo.
+
+Algoritmo é uma sequência de passos para resolver um problema.
+
+--------------------------------
+
+ATALHOS INTELLIJ:
+sout = System.out.println();
+
+--------------------------------
+
+PADRÕES DE ESCRITA:
+
+camelCase:
+String diasDaSemana = "Segunda, Terça, Quarta, Quinta, Sexta, Sábado, Domingo";
+a primeira palavra é minúscula e as próximas palavras começam com letra maiúscula.
+Não começar com números, exemplo: 123soma mas soma2, soma3 pode
+
+--------------------------------
+
+OPERADORES LÓGICOS
+
+AND = &&
+Retorna true somente se ambas as condições forem verdadeiras
+
+boolean a = true;
+boolean b = true;
+boolean resultado = a && b; // resultado = true
+
+OR = ||
+Retorna true se pelo menos uma das condições for verdadeira
+
+boolean a = true;
+boolean b = false;
+boolean resultado = a || b; // resultado = true
+
+
+NOT = !
+Inverte o valor lógico, se for TRUE vira FALSE
+
+boolean a = true;
+boolean resultado = !a; // resultado = false
+
+
+XOR (DIFERENTE !=) = ^
+Retorna true somente se as condições forem diferentes
+
+boolean a = true;
+boolean b = false;
+boolean resultado = a ^ b; // resultado = true
+
+--------------------------------
+
+OPERADORES TERNÁRIOS
+
+if = ?
+else = :
+
+Exemplo:
+String mensagem = fimDeSemana ? "É fim de semana" : "Não é fim de semana";
+Se (if) for TRUE "É fim de semana"
+Se não (else) "Não é fim de semana"
+
+--------------------------------
+
+OPERADORES RELACIONAIS
+
+if(variavel condição valor){
+  se condição cumprida, roda o código aqui.
+}
+else{
+  se condição de if não foi cumprida, rodará o código aqui
+}
+
+variavel a
+if(){
+  se aqui não for
+  variavel a = blabla;
+}
+else if{
+  vai aqui, se também não for
+  variavel a = blabla2;
+}
+else if{
+  vai aqui, se também não for
+  variavel a = blabla3;
+}
+else{
+  vai aqui.
+  variavel a = blabla4;
+}
+
+switch (variavel a){
+  case blabla:
+    roda o codigo aqui
+    break;
+  case blabla2:
+    roda aqui
+    break;
+  case blabla3:
+    roda aqui
+    break;
+  case blabla4:
+    roda aqui
+    break;
+}
+
+também da para fazer cases juntos:
+switch (variavel a){
+  case blabla:
+  case blabla2:
+    roda aqui
+    break;
+  case blabla3:
+  case blabla4:
+    roda aqui
+    break;
+}
+
+Precisa adicionar o break se não o switch vai percorrer todos os casos mesmo se um estiver correto, o break serve para interromper o switch caso tenha chegado no objetivo.
+
+
+--------------------------------
+
+
