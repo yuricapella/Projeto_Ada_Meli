@@ -1,5 +1,12 @@
 
 
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.TextStyle;
+import java.util.Locale;
+
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("hello world");
@@ -123,7 +130,49 @@ public class Main {
         System.out.println(nome.toLowerCase());
         System.out.println(nome.length());
 
-           
+        String nomeOutro = "Yuri";
+        System.out.println(nome.equals(nomeOutro));
+
+        nomeOutro = "yuri";
+        System.out.println(nome.equals(nomeOutro));
+
+        System.out.println(nome.equalsIgnoreCase(nomeOutro));
+
+        // ISO 8681
+        LocalDate hoje = LocalDate.now();
+        String language = "pt";
+        String country = "BR";
+        Locale pais = Locale.of(language, country);
+
+        String diaSemana = hoje.getDayOfWeek().getDisplayName(TextStyle.FULL, pais);
+        System.out.println(diaSemana);
+        
+        String saudacao;
+        LocalDateTime agora = LocalDateTime.now();
+        if (agora.getHour() >= 0 && agora.getHour() < 12){
+            saudacao = "Bom dia";
+        }
+        else if(agora.getHour() >= 12 && agora.getHour() < 18){
+            saudacao = "Boa tarde";
+        }
+        else if(agora.getHour() >= 18 && agora.getHour() < 24){
+            saudacao = "Boa noite";
+        }
+        else{
+            saudacao = "";
+        }
+        System.out.printf("Olá, %s. Hoje é %s, e são %s:%s, %s.%n", nome, diaSemana, agora.getHour(),agora.getMinute(),saudacao.toUpperCase());
+
+        System.out.println("------------------------------------------------");
+        System.out.println("LAÇOS NUMÉRICOS");
+
+        for (int i = 1; i <= 10; i++){
+            for (int j = 1; j <= 10; j++) {
+                System.out.println(i + "x" + j + " = " + i * j);
+                //para cada iteração do i, terá 10 iterações do j
+            }
+            
+        }
 
     }
 }
