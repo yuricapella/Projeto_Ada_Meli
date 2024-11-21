@@ -11,6 +11,34 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("hello world");
 
+        
+        //variaveis();
+        //operadoresAritmeticos();
+        //operadoresLogicos();
+        //estruturasCondicionais();
+        //stringsEDatas();
+        //lacosNumericos();
+        vetores();
+    }
+    
+    public static void variaveis() {
+        System.out.println("------------------------------------------------");
+        System.out.println("VARIÁVEIS");
+
+        char c = 'a';
+        String s = "Olá";
+        boolean b1 = true;
+        int d = 5;
+        System.out.println("O valor de c é: " + c);
+        System.out.println("O valor de s é: " + s);
+        System.out.println("O valor de b1 é: " + b1);
+        System.out.println("O valor de d é: " + d);
+        
+    }
+
+    public static void operadoresAritmeticos() {
+        System.out.println("------------------------------------------------");
+        System.out.println("OPERADORES ARITMÉTICOS");
         int a = 3;
         int b = 2;
         int soma = a + b;
@@ -18,21 +46,16 @@ public class Main {
         int multiplicacao = a * b;
         float divisao =  (float) a / b;
         int resto = a % b;
-        char c = 'a';
-        String s = "Olá";
-        boolean b1 = true;
-        System.out.println("------------------------------------------------");
-        System.out.println("OPERAÇÕES MATEMÁTICAS");
-
-        System.out.println("O valor de c é: " + c);
-        System.out.println("O valor de s é: " + s);
-        System.out.println("O valor de b1 é: " + b1);
+        
         System.out.println("O resultado da soma é: " + soma);
         System.out.println("O resultado da subtração é: " + subtracao);
         System.out.println("O resultado da multiplicação é: " + multiplicacao);
         System.out.println("O resultado da divisão é: " + divisao);
         System.out.println("O resultado do resto é: " + resto);
+        
+    }
 
+    public static void operadoresLogicos() {
         System.out.println("------------------------------------------------");
         System.out.println("OPERADORES LÓGICOS");
 
@@ -48,7 +71,9 @@ public class Main {
         fimDeSemana = false;
         mensagem = fimDeSemana ? "É fim de semana" : "Não é fim de semana";
         System.out.println(mensagem);
+    }
 
+    public static void estruturasCondicionais() {
         System.out.println("------------------------------------------------");
         System.out.println("ESTRUTURAS CONDICIONAIS");
 
@@ -119,7 +144,9 @@ public class Main {
             default:
                 System.out.println("Graduação inválida!");
         }
+    }
 
+    public static void stringsEDatas(){
         System.out.println("------------------------------------------------");
         System.out.println("MANIPULAÇÃO DE STRINGS E DATAS");
 
@@ -162,7 +189,10 @@ public class Main {
             saudacao = "";
         }
         System.out.printf("Olá, %s. Hoje é %s, e são %s:%s, %s.%n", nome, diaSemana, agora.getHour(),agora.getMinute(),saudacao.toUpperCase());
+        
+    }
 
+    public static void lacosNumericos(){
         System.out.println("------------------------------------------------");
         System.out.println("LAÇOS NUMÉRICOS");
 
@@ -171,8 +201,12 @@ public class Main {
                 System.out.println(i + "x" + j + " = " + i * j);
                 //para cada iteração do i, terá 10 iterações do j
             }
-            
         }
+    }
+
+    public static void vetores(){
+        System.out.println("------------------------------------------------");
+        System.out.println("VETORES");
 
     }
 }

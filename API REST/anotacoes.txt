@@ -1,0 +1,311 @@
+API (Application Programming Interface)
+
+- É um conjunto de regras que permite a comunicação entre diferentes softwares
+- Funciona como um intermediário entre sistemas
+- Principais funções:
+  * Receber requisições
+  * Processar dados
+  * Retornar respostas padronizadas
+
+- Benefícios:
+  * Reutilização de código
+  * Segurança (não expõe detalhes internos)
+  * Padronização
+  * Facilita integrações
+
+- Tipos principais:
+  * REST
+  * SOAP
+  * GraphQL
+  * WebSocket
+
+API utiliza o mesmo protocolo HTTP dos sites:
+- Métodos HTTP principais:
+  * GET: Buscar recursos
+  * POST: Criar recursos
+  * PUT: Atualizar recursos
+  * DELETE: Remover recursos
+- Mesma estrutura de requisição/resposta dos sites
+- Diferença principal: APIs retornam dados puros (geralmente JSON), sites retornam HTML
+
+---------------------------
+
+Padrão REST para padronizar APIs:
+- Princípios do REST:
+  1. Recursos: Tudo é considerado um recurso, identificado por uma URL única.
+  2. Métodos HTTP: Utiliza GET, POST, PUT, DELETE para operações.
+  3. Representações: Recursos podem ser representados em JSON ou XML.
+  4. Stateless: Cada requisição deve conter todas as informações necessárias.
+  5. Cache: Respostas devem ser definidas como cacheáveis ou não.
+
+- Estrutura de URL:
+  - Use substantivos no plural para recursos.
+  - Exemplo de URLs:
+    - GET /api/usuarios
+    - POST /api/usuarios
+    - GET /api/usuarios/{id}
+    - PUT /api/usuarios/{id}
+    - DELETE /api/usuarios/{id}
+
+
+---------------------------
+
+API (INTERFACE)
+REST (PADRÃO)
+HTTP (PROTOCOLO)
+
+---------------------------
+
+HTTP (PROTOCOLO)
+- O que é? Protocolo de comunicação que permite a transferência de dados entre cliente e servidor.
+- Principais características:
+  - Baseado em texto
+  - Stateless
+  - Métodos HTTP: GET, POST, PUT, DELETE
+- Estrutura de uma requisição HTTP:
+  - Método, URL, Cabeçalhos, Corpo
+- Estrutura de uma resposta HTTP:
+  - Código de status, Cabeçalhos, Corpo
+
+  Sempre um Cliente e um Servidor:
+  - Cliente: Aplicação ou dispositivo que faz a requisição (ex: navegador, app móvel).
+  - Servidor: Aplicação que recebe a requisição, processa e retorna a resposta.
+  - Funcionamento:
+    1. Requisição: Cliente envia uma requisição HTTP ao servidor.
+    2. Processamento: Servidor processa a requisição.
+    3. Resposta: Servidor envia uma resposta HTTP de volta ao cliente.
+  - Exemplo prático: Acesso a um site ou interação com uma API.
+
+Fluxo de Interação: Cliente, Servidor e Banco de Dados:
+1. Cliente: Faz uma requisição ao servidor.
+2. Request: Envia uma requisição HTTP.
+3. Servidor: Recebe e processa a requisição.
+4. Sistema: Pode consultar um sistema adicional ou banco de dados.
+5. Banco de Dados: O servidor faz uma consulta ao banco de dados.
+6. Retorno do Banco de Dados: Retorna os resultados da consulta.
+7. Processamento: O servidor processa os dados recebidos.
+8. Response: O servidor envia uma resposta HTTP ao cliente.
+
+Cliente -> Request -> Servidor -> Processa -> Sistema -> Consulta -> Banco de Dados
+Banco de Dados -> Retorna -> Sistema -> Retorna Processamento -> Servidor -> Response -> Cliente
+
+-----
+
+Componentes de uma Requisição HTTP:
+- URL / URI:
+  - Localização de um recurso na web.
+  - Exemplo: https://www.exemplo.com/api/usuarios
+
+- Corpo (Body):
+  - Dados a serem processados.
+  - Usado em métodos como POST e PUT.
+  - Exemplo de corpo em JSON:
+    {
+      "nome": "João",
+      "email": "joao@example.com"
+    }
+
+- Método (Method):
+  - Ação que o cliente deseja realizar.
+  - Métodos comuns: GET, POST, PUT, DELETE.
+  - Exemplo: POST /api/usuarios
+
+- Cabeçalho (Header):
+  - Dados da chamada, informações adicionais.
+  - Exemplo de cabeçalho:
+    Content-Type: application/json
+    Authorization: Bearer token_de_autenticacao
+
+-----
+
+Fluxo de Requisição HTTP:
+1. O Cliente inicia uma requisição HTTP.
+   |
+   v
+2. O Cliente define a URL/URI do recurso desejado.
+   Exemplo: https://www.exemplo.com/api/usuarios
+   |
+   v
+3. O Cliente escolhe o Método (Method) para a ação desejada.
+   Exemplo: POST (para criar um novo usuário)
+   |
+   v
+4. O Cliente adiciona Cabeçalhos (Header) à requisição.
+   Exemplo:
+   Content-Type: application/json
+   Authorization: Bearer token_de_autenticacao
+   |
+   v
+5. O Cliente inclui o Corpo (Body) da requisição com os dados a serem processados.
+   Exemplo de corpo em JSON:
+   {
+     "nome": "João",
+     "email": "joao@example.com"
+   }
+   |
+   v
+6. O Cliente envia a requisição HTTP ao Servidor.
+   |
+   v
+7. O Servidor processa a requisição:
+   - Verifica a URL/URI para identificar o recurso.
+   - Usa o Método para determinar a ação a ser realizada.
+   - Lê os Cabeçalhos para entender o contexto da requisição.
+   - Processa os dados do Corpo conforme necessário.
+   |
+   v
+8. O Servidor retorna uma Resposta (Response) ao Cliente.
+   |
+   v
+9. O Cliente recebe a Resposta e a processa.
+
+---------------------------
+
+Resumo de HTTP e HTTPS:
+- HTTP (Hypertext Transfer Protocol):
+  - Protocolo de comunicação para transferir dados na web.
+  - Não seguro: dados em texto simples.
+  - Stateless: cada requisição é independente.
+  - Exemplo de URL: http://www.exemplo.com
+
+- HTTPS (Hypertext Transfer Protocol Secure):
+  - Versão segura do HTTP com criptografia.
+  - Seguro: dados criptografados usando SSL/TLS.
+  - Autenticação: garante comunicação com o servidor correto.
+  - Exemplo de URL: https://www.exemplo.com
+
+Diferenças entre URL, URI e URN:
+- URI (Uniform Resource Identifier):
+  - Identificador genérico para recursos na web.
+  - Exemplo: http://www.exemplo.com e urn:isbn:0451450523.
+
+- URL (Uniform Resource Locator):
+  - Tipo específico de URI que fornece a localização e como acessar um recurso.
+  - Exemplo: https://www.exemplo.com/api/usuarios.
+
+- URN (Uniform Resource Name):
+  - Tipo de URI que identifica um recurso por nome em um namespace específico.
+  - Exemplo: urn:isbn:0451450523 (identifica um livro pelo ISBN).
+
+---------------------
+
+Cliente (App/Web) 
+     |
+     v
+Requisição HTTP (GET/POST/PUT/DELETE)
+     |
+     v
+Servidor (API)
+     |
+     v
+Lógica de Negócios
+     |
+     v
+Banco de Dados
+     |
+     v
+Resposta HTTP (JSON/XML)
+     |
+     v
+Cliente (App/Web)
+
+Arquitetura de uma API:
+1. Cliente e Servidor:
+   - Cliente: Aplicação que faz requisições à API.
+   - Servidor: Processa as requisições e retorna as respostas.
+
+2. Recursos:
+   - Entidades manipuladas pela API, identificadas por URLs únicas.
+
+3. Métodos HTTP:
+   - GET: Recuperar dados.
+   - POST: Criar novo recurso.
+   - PUT: Atualizar recurso existente.
+   - DELETE: Remover recurso.
+
+4. Formato de Dados:
+   - JSON: Formato comum para troca de dados.
+   - XML: Outro formato, menos comum.
+
+5. Cabeçalhos (Headers):
+   - Autenticação: Informações sobre como o cliente se autentica.
+   - Tipo de Conteúdo: Indica o formato dos dados.
+
+6. Versionamento:
+   - Permite que diferentes versões da API coexistam.
+   - Exemplo: /api/v1/usuarios.
+
+7. Documentação:
+   - Essencial para que desenvolvedores entendam como usar a API.
+   - Ferramentas: Swagger/OpenAPI, Postman.
+
+8. Segurança:
+   - Autenticação: Métodos como OAuth, JWT.
+   - Criptografia: Uso de HTTPS.
+
+------------------------
+
+Para que serve uma Arquitetura de API:
+
+1. Facilitar a Comunicação:
+   - Interoperabilidade entre sistemas.
+   - Acesso estruturado a dados e serviços.
+
+2. Separação de Preocupações:
+   - Modularidade e manutenção facilitada.
+   - Escalabilidade independente de componentes.
+
+3. Reutilização de Código:
+   - Serviços compartilhados entre aplicações.
+
+4. Facilitar Integrações:
+   - Conexão com serviços de terceiros.
+   - Criação de um ecossistema de aplicações.
+
+5. Segurança:
+   - Controle de acesso e proteção de dados.
+
+6. Documentação e Usabilidade:
+   - Facilidade de uso com documentação clara.
+   - Exemplos e tutoriais para desenvolvedores.
+
+7. Manutenção e Evolução:
+   - Versionamento para compatibilidade.
+   - Facilidade de atualizações na lógica de negócios.
+
+----------------------------
+
+Exemplo de Estrutura de API:
+
+GET /api/usuarios          // Recupera a lista de usuários
+GET /api/usuarios/{id}     // Recupera um usuário específico
+POST /api/usuarios         // Cria um novo usuário
+PUT /api/usuarios/{id}     // Atualiza um usuário existente
+DELETE /api/usuarios/{id}  // Remove um usuário
+
+Princípios de Design de API
+
+1. Interface Simples e Direta
+Foco nos Dados: A interface deve se concentrar apenas nos dados necessários, evitando complexidade desnecessária.
+Formato Consistente: Se a API trabalha com dados em JSON, deve-se manter esse formato em todas as interações.
+
+2. Regras de Negócio Mínimas
+Transporte de Dados: A API deve atuar como um "trabalhador" que simplesmente pega dados de um lado e os leva para o outro, sem aplicar regras de negócio complexas.
+Separação de Responsabilidades: A API não deve decidir o que mostrar ao cliente; isso deve ser responsabilidade do cliente. A API deve fornecer os dados de forma que o cliente saiba como apresentá-los.
+
+3. Processamento de Regras de Negócio
+Consulta a Fontes de Dados: A API deve ser capaz de consultar diferentes fontes de dados para obter as informações necessárias.
+Comunicação com Outros Serviços: A API pode precisar se comunicar com outros serviços para obter ou enviar dados, mas deve manter essa lógica fora da interface.
+
+4. Consistência nas Respostas
+Respostas Esperadas: O cliente deve sempre receber a resposta esperada, independentemente da complexidade do processamento interno.
+Tratamento de Erros: A API deve fornecer mensagens de erro claras e consistentes para que o cliente saiba como lidar com problemas.
+
+5. Definição de Recursos
+Identificação de Recursos: É importante definir quais recursos a API disponibiliza e como eles são acessados.
+Estrutura de Recursos: Cada recurso deve ter uma URL única e clara, e os métodos HTTP devem ser usados de forma apropriada (GET, POST, PUT, DELETE).
+
+6. Parte dos Recursos
+Limitação de Dados: A API deve permitir que o cliente solicite apenas a parte dos recursos que realmente precisa, evitando sobrecarga de dados.
+Paginação e Filtragem: Implementar mecanismos de paginação e filtragem para que o cliente possa gerenciar a quantidade de dados recebidos.
+
