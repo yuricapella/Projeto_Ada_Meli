@@ -4,6 +4,7 @@
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.TextStyle;
+import java.util.Arrays;
 import java.util.Locale;
 
 
@@ -12,12 +13,12 @@ public class Main {
         System.out.println("hello world");
 
         
-        //variaveis();
-        //operadoresAritmeticos();
-        //operadoresLogicos();
-        //estruturasCondicionais();
-        //stringsEDatas();
-        //lacosNumericos();
+        // variaveis();
+        // operadoresAritmeticos();
+        // operadoresLogicos();
+        // estruturasCondicionais();
+        // stringsEDatas();
+        // lacosNumericos();
         vetores();
     }
     
@@ -208,5 +209,49 @@ public class Main {
         System.out.println("------------------------------------------------");
         System.out.println("VETORES");
 
+        int numero1 = 1;
+        int numero2 = 2;
+        int numero3 = 3;
+        int numero4 = 4;
+        int numero5 = 5;
+        System.out.println(numero1);
+        System.out.println(numero2);
+        System.out.println(numero3);
+        System.out.println(numero4);
+        System.out.println(numero5);
+        System.out.printf("%d,%d,%d,%d,%d\n", numero1, numero2, numero3, numero4, numero5);
+
+
+        int[] numeros = new int[5];
+        numeros[0] = 1;
+        numeros[1] = 2;
+        numeros[2] = 3;
+        numeros[3] = 4;
+        numeros[4] = 5;
+        for (int i=0; i<numeros.length; i++)
+            System.out.println(numeros[i]);
+
+        int[] numeros2 = {1,2,3,4,5};
+        System.out.println(Arrays.toString(numeros2));
+
+        String[] letras = {"A","B","C","D","E"};
+        System.out.println(Arrays.toString(letras));
+
+        // verificar maior, menor e média
+        int maior = numeros[0];
+        int menor = numeros[0];
+        int media = 0;
+
+
+        for (int i=0; i < numeros.length;i++){
+            if (numeros[i] > maior){
+                maior = numeros[i];
+            }
+            if(numeros[i] < menor){
+                menor = numeros[i];
+            }
+            media += numeros[i];
+        }
+        System.out.printf("Maior = %d, Menor = %d, Média = %d\n", maior,menor,media/numeros.length);
     }
 }

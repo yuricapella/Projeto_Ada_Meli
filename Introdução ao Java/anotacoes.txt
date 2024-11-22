@@ -190,3 +190,65 @@ System.out.println(nome.equalsIgnoreCase(nomeOutro)); booleano que verifica se �
 
 println faz a quebra de linha automatica
 já printf temos que colocar manualmente
+
+--------------------------------
+Vetores
+
+O tamanho de um array é imutavel, se eu colocar 5, não é possivel alterar novamente.
+Pode-se preencher tanto nenhuma posição quanto até 5 posições mas não uma sexta posição.
+
+Manipula-se o array utilizando os indices, primeiro indice em java é 0, então seria 0,1,2,3,4 para 5 posições
+
+int[] numeros = new int[5];
+        numeros[0] = 1;
+        numeros[1] = 2;
+        numeros[2] = 3;
+        numeros[3] = 4;
+        numeros[4] = 5;
+        System.out.println(numeros);
+
+resultado: [I@7fcf2fc1
+[: Indica que é um array.
+I: O I representa o tipo dos elementos do array, que neste caso é int (inteiro)
+@: Separa o tipo da referência de memória.
+7fcf2fc1: Hashcode do objeto, representando o endereço de memória.
+
+Podemos usar System.out.println(Arrays.toString(numeros));
+Função pronta que já nos mostra oque tem dentro do array.
+
+ou podemos usar o for para iterar sobre o array:
+
+for (int i=0; i<numeros.length; i++)
+            System.out.println(numeros[i]);
+em cada linha mostrará a informação que o I está percorrendo no indice do array, 0,1,2,3,4
+o for começa com i=0 então será indice=0, acabou a primeira iteração, i++ que é i+1
+for está no i=1 então mostrará o indice=1 e assim por diante.
+
+
+OBS:
+Java é uma linguagem fortemente tipada e não podemos misturar tipos dentro da mesma estrutura, ou é só inteiros, ou só string, ou só floats e etc.
+
+
+Uma forma de deixar o código mais compacto seria ao inves de 
+
+int[] numeros = new int[5];
+        numeros[0] = 1;
+        numeros[1] = 2;
+        numeros[2] = 3;
+        numeros[3] = 4;
+        numeros[4] = 5;
+for (int i=0; i<numeros.length; i++)
+    System.out.println(numeros[i]);
+
+Podemos usar:    
+int[] numeros2 = {1,2,3,4,5};
+System.out.println(Arrays.toString(numeros2));
+
+Qual a diferença?
+Se você estiver lidando com um conjunto fixo de dados, como dias da semana ou meses do ano, a inicialização com {} é preferível. Se você estiver lidando com dados que podem variar, como entradas do usuário, a inicialização com new pode ser mais apropriada.
+
+
+
+
+
+
